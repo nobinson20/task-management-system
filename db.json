@@ -1,0 +1,44 @@
+{
+    "tasks": [
+        {
+            "ID": 1,
+            "QuoteType": "dl",
+            "Contact": "foo@gmail.com",
+            "Task": "Develop new in-house accounting solution",
+            "DueDate": "2022-12-31T",
+            "TaskType": "Follow-up"
+        },
+    {
+        "ID": 2,
+        "QuoteType": "by",
+        "Contact": "nn@gmail.com",
+        "Task": "Develop new in-house accounting solution",
+        "DueDate": "2022-12-31T",
+        "TaskType": "Follow-up"
+    },
+    {
+        "ID": 3,
+        "QuoteType": "DC",
+        "Contact": "whatever kinda engineer",
+        "Task": "some new task here",
+        "DueDate": "2023-12-31T",
+        "TaskType": "New"
+    },
+    {
+        "ID": 4,
+        "QuoteType": "BL",
+        "Contact": "asdf@asdf.com",
+        "Task": "sometask",
+        "DueDate": "2022-12-31T",
+        "TaskType": "Old"
+    },
+    {
+        "ID": 5,
+        "QuoteType": "BK",
+        "Contact": "blah@asdf.com",
+        "Task": "sometask",
+        "DueDate": "2022-12-31T",
+        "TaskType": "Old"
+    }
+]
+}

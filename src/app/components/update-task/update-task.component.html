@@ -1,0 +1,112 @@
+<h2 mat-dialog-title style="background: #3f51b5; color: white">
+    {{ "Update the current quote" | titlecase }}
+  </h2>
+  
+  <mat-dialog-content>
+
+<!-- Quote type -->
+<div class="col-md-6">
+    <mat-form-field>
+      <mat-label for="ID">No.</mat-label>
+      <input
+          matInput
+          type="text"
+          name="Id"
+          [(ngModel)]="Id"
+          id="Id"
+          [value]="Id"
+          disabled
+        />
+    </mat-form-field>
+  </div>
+
+
+    <!-- Quote type -->
+    <div class="col-md-6">
+      <mat-form-field>
+        <mat-label for="QuoteType">Quote Type</mat-label>
+        <mat-select
+          name="QuoteType"
+          [(ngModel)]="QuoteType"
+          id="QuoteType"
+          [value]="QuoteType"
+          required
+        >
+          <mat-option value="Auto">Auto</mat-option>
+          <mat-option value="Boat">Boat</mat-option>
+          <mat-option value="Home">Home</mat-option>
+          <mat-option value="General">General</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  
+    <!-- Task type -->
+    <div class="col-md-6">
+      <mat-form-field>
+        <mat-label for="TaskType">Task Type</mat-label>
+        <input
+          matInput
+          type="text"
+          name="TaskType"
+          [(ngModel)]="TaskType"
+          id="TaskType"
+          placeholder="Add Task Type"
+          required
+        />
+      </mat-form-field>
+    </div>
+  
+    <!-- Contact -->
+    <div class="col-md-6">
+      <mat-form-field>
+        <mat-label for="Contact">Contact Name</mat-label>
+        <input
+          matInput
+          type="text"
+          name="Contact"
+          [(ngModel)]="Contact"
+          id="Contact"
+          placeholder="Add Contact Name"
+          required
+        />
+      </mat-form-field>
+    </div>
+  
+    <!-- Task -->
+    <div class="col-md-6">
+      <mat-form-field>
+        <mat-label for="Task">Quote</mat-label>
+        <input
+          matInput
+          type="text"
+          name="Task"
+          [(ngModel)]="Task"
+          id="Task"
+          placeholder="Add Quote"
+          required
+        />
+      </mat-form-field>
+    </div>
+  
+    <!-- Due date -->
+    <div class="col-md-6">
+      <mat-form-field>
+        <mat-label for="DueDate">Due Date</mat-label>
+        <input
+          matInput
+          type="datetime-local"
+          name="DueDate"
+          [(ngModel)]="DueDate"
+          id="DueDate"
+          placeholder="Add Due Date"
+          required
+
+        />
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+  </mat-dialog-actions>

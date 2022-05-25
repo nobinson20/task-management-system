@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'itlize-demo-app';
+  color = '';
+
+
+  // registerHandler(event: any){
+
+  // }
+
 }

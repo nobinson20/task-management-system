@@ -1,0 +1,33 @@
+<div class="center">
+  <table class="table table-borderless">
+    <tr>
+      <td class="lblclass">Quote No.</td>
+      <td class="dtaclass">{{ task?.ID }}</td>
+    </tr>
+
+    <tr>
+      <td class="lblclass">Quote Type</td>
+      <td class="dtaclass">{{ task?.QuoteType }}</td>
+    </tr>
+
+    <tr>
+      <td class="lblclass">Contact</td>
+      <td class="dtaclass">{{ task?.Contact }}</td>
+    </tr>
+
+    <tr>
+      <td class="lblclass">Task details</td>
+      <td class="dtaclass">{{ task?.Task }}</td>
+    </tr>
+
+    <tr>
+      <td class="lblclass">Due Date</td>
+      <td class="dtaclass">{{ task?.DueDate | date: "shortDate" }}</td>
+    </tr>
+
+    <tr>
+      <td class="lblclass">Task Type</td>
+      <td class="dtaclass">{{ task?.TaskType }}</td>
+    </tr>
+  </table>
+</div>

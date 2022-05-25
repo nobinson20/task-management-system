@@ -1,0 +1,123 @@
+<div class="row">
+  <div class="col-md-4 offset-4">
+    <mat-toolbar color="primary">
+      <h2><span>Sign up</span></h2>
+    </mat-toolbar>
+    <form #registerForm="ngForm" (ngSubmit)="registerUser()">
+      <mat-card-content>
+        <div style="margin: 5px; text-align: center">
+          <mat-form-field appearance="fill" style="width: 100%">
+            <mat-label>User name</mat-label>
+            <input
+              matInput
+              required
+              type="email"
+              name="username"
+              [(ngModel)]="username"
+              id="username"
+              placeholder="User name"
+              class="form-control"
+            />
+          </mat-form-field>
+          <span
+            *ngIf="
+              (registerForm.controls['username']?.invalid &&
+                registerForm.controls['username']?.touched) ||
+              (registerForm.controls['username']?.touched &&
+                !emailValid(registerForm.controls['username']?.value))
+            "
+            style="color: red; float: left"
+          >
+            * Provide valid email address
+          </span>
+        </div>
+
+        <div style="margin: 5px; text-align: center">
+          <mat-form-field appearance="fill" style="width: 100%">
+            <mat-label>Password (8 charcters minimum)</mat-label>
+            <input
+              matInput
+              type="password"
+              name="password"
+              [(ngModel)]="password"
+              id="password"
+              placeholder="Please enter at least one number and one letter"
+              minlength="8"
+              required
+            />
+          </mat-form-field>
+          <span
+            *ngIf="
+              (registerForm.controls['password']?.invalid &&
+                registerForm.controls['password']?.touched) ||
+              (registerForm.controls['password']?.touched &&
+                !isPwdPatternMatched(registerForm.controls['password']?.value))
+            "
+            style="color: red; float: left"
+          >
+            * Invalid
+          </span>
+        </div>
+
+        <div style="margin: 5px; text-align: center">
+          <mat-form-field appearance="fill" style="width: 100%">
+            <mat-label>Confirm password</mat-label>
+            <input
+              matInput
+              type="password"
+              name="confirmPassword"
+              [(ngModel)]="confirmPassword"
+              id="confirmPassword"
+              placeholder="Confirm your password"
+              minlength="8"
+              required
+            />
+          </mat-form-field>
+          <div
+            *ngIf="
+              (registerForm.controls['confirmPassword']?.invalid &&
+                registerForm.controls['confirmPassword']?.touched) ||
+              (registerForm.controls['confirmPassword']?.touched &&
+                !isPwdPatternMatched(
+                  registerForm.controls['confirmPassword']?.value
+                ))
+            "
+            style="color: red; text-align: left"
+          >
+            * Invalid
+          </div>
+
+          <div
+            *ngIf="
+              registerForm.controls['password']?.valid &&
+              registerForm.controls['confirmPassword']?.touched &&
+              registerForm.controls['password']?.value !==
+                registerForm.controls['confirmPassword']?.value
+            "
+            style="color: red; text-align: left"
+          >
+            * Not matched
+          </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <button
+          mat-button
+          color="primary"
+          type="submit"
+          [disabled]="
+            registerForm.controls['username']?.invalid ||
+            registerForm.controls['password']?.invalid ||
+            registerForm.controls['confirmPassword']?.invalid ||
+            registerForm.controls['password']?.value !=
+              registerForm.controls['confirmPassword']?.value ||
+            !isPwdPatternMatched(registerForm.controls['password']?.value)
+          "
+        >
+          Sign Up
+        </button>
+      </mat-card-content>
+    </form>
+  </div>
+</div>

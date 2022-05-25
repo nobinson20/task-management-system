@@ -6,7 +6,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-/* :root {
+:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -9545,10 +9545,10 @@ textarea.cdk-textarea-autosize-measuring-firefox {
   height: 0 !important;
 }
 @keyframes cdk-text-field-autofill-start {
-
+  /*!*/
 }
 @keyframes cdk-text-field-autofill-end {
-
+  /*!*/
 }
 .cdk-text-field-autofill-monitored:-webkit-autofill {
   animation: cdk-text-field-autofill-start 0s 1ms;
@@ -11802,60 +11802,4 @@ table.mat-table tr td.mat-cell:last-of-type {
 }
 #date-form-field {
   width: 96%;
-} */
-
-
-/* fadeInDown part (start)*/
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-@-moz-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0);
-  }
-}
-@-o-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -ms-transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    -ms-transform: translateY(0);
-  }
-}
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  -moz-animation-name: fadeInDown;
-  -o-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
-
-/* fadeInDown part (end)*/
-
-.example-spacer {
-  flex: 1 1 auto;
 }
